@@ -1,0 +1,136 @@
+@CHARSET "UTF-8";
+
+/*
+Theme Name: dummy theme
+Theme URI: http://dummytheme.com
+Author: xac
+Author URI: http://xac-i.net
+Description: description
+Version: 1.11
+License: GNU General Public License
+License URI: license.txt
+Tags: 
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+body {
+	width: 960px;
+	margin: 33px auto;	
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 11px;	
+}
+
+p {
+	font-size: 11px;
+}
+
+#page {
+	background-color: white;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px #888;
+	box-shadow: 0 0 5px #888;	
+}
+
+header, #content, aside, footer {
+	display: block;	
+}
+
+/***********************************/
+/** HEADER *************************/
+header {
+
+	height: 90px;
+	background-color: #CCC;
+
+}
+
+header #branding{
+	display: block;
+	padding: 11px;
+	padding-bottom: 22px;
+}
+
+header nav {
+	width: 61.8%;
+	float: left;
+	display: block;
+	background-color: #EEE;
+}
+
+nav .menu-nav-container {
+		
+}
+	
+nav ul {
+	position:relative;	
+}
+
+nav li {
+	float:left; 
+	list-style-type:none; 
+}
+
+nav a {
+	display: block;
+	padding: 0 11px;
+}
+
+header #categories {
+	display: block;
+	clear: left;
+	
+}
+
+header #search {
+	width: 38.2%;
+	float: right;
+	text-align: right;	
+}
+
+/********************* HEADER end **/
+/***********************************/
+
+	
+#main {
+	clear: both;
+}
+
+#content {
+	width: 61.8%;	
+	float: left;
+	background-color: #BBB;
+}
+
+aside {
+	width: 38.2%;
+	float: right;	
+	background-color: #888;	
+	
+}
+
+footer {
+	clear: both;
+	background-color: #AAA;	
+	}

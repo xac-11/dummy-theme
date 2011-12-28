@@ -4,10 +4,16 @@
 
 <title></title>
 	
-
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	
+	<?php 
+		wp_deregister_script( 'jquery' );
+		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
+		wp_register_script('modernizr', 'http://www.modernizr.com/downloads/modernizr-2.0.6.js');
+		wp_enqueue_script('modernizr');
+	?>
 
 </head>
 
@@ -17,9 +23,17 @@
 			<div id="branding">
 				xac
 			</div>
-			<nav>
-				<?php wp_nav_menu( ); ?>
-				
+
+			<div id="headbar">
+				<nav>
+					<?php 	xac_nav_menu();	 //wp_nav_menu( );?>
+				</nav>
+			 
+				<div id="search">
+					<?php get_search_form(); ?>
+				</div>
+			</div>
+			<!--  
 				<div id="categories">
 					<ul>
 					<?php 
@@ -51,11 +65,7 @@
 					?>
 					</ul>
 				</div>
-			</nav><!-- #access -->
-			
-			<div id="search">
-				<?php get_search_form(); ?>
-			</div>
+				-->
 	</header><!-- #branding -->
 
 

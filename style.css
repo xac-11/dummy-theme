@@ -12,6 +12,11 @@ License URI: license.txt
 Tags: 
 */
 
+/***********************************/
+/** start **************************/
+
+/**************************** end **/
+/***********************************/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -33,6 +38,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 body {
+	font-family: 'Ubuntu', sans-serif;
 	width: 960px;
 	margin: 33px auto;	
 }
@@ -61,7 +67,7 @@ header, #content, aside, footer {
 /** HEADER *************************/
 header {
 
-	height: 90px;
+	min-height: 111px;
 	background-color: #CCC;
 
 }
@@ -72,49 +78,140 @@ header #branding{
 	padding-bottom: 22px;
 }
 
-header nav {
-	width: 61.8%;
-	float: left;
-	display: block;
-	background-color: #EEE;
-}
-
-nav .menu-nav-container {
-		
-}
-	
-nav ul {
-	position:relative;	
-}
-
-nav li {
-	float:left; 
-	list-style-type:none; 
-}
-
-nav a {
-	display: block;
-	padding: 0 11px;
-}
-
 header #categories {
 	display: block;
 	clear: left;
 	
 }
 
-header #search {
-	width: 38.2%;
-	float: right;
-	text-align: right;	
-}
+
 
 /********************* HEADER end **/
+/***********************************/
+
+/***********************************/
+/** NAV start **********************/
+
+#headbar {
+	display: block;
+	
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;  
+	background-image:-moz-linear-gradient(0% 22px 90deg, #222, #999);
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 70%, from(#999), to(#222));   
+	-moz-box-shadow:2px 2px 2px rgba(0,0,0,.75);
+	-webkit-box-shadow:2px 2px 2px rgba(0,0,0,.75);
+	box-shadow:2px 2px 2px rgba(0,0,0,.75); 
+	
+	
+	margin-left: 22px; margin-right: 22px;
+	border: 1px solid #222;  background-color: #6a6a6a;
+	height: 34px;
+	
+}
+
+#headbar #search {
+	display: block;
+	float: right;
+	height: 34px;
+	margin: 4px auto;
+	padding-right: 22px;
+}
+
+	
+#headbar #search #s {
+	padding: 2px;	
+ 	text-shadow: 0 0 2px #6a6a6a;
+	font-size: 12px; 
+	
+	-moz-border-radius-topleft:4px; 
+	-moz-border-radius-bottomleft:4px; 
+	-webkit-border-top-left-radius:4px;
+	-webkit-border-bottom-left-radius:4px; 
+	border-top-left-radius:4px; 
+	border-bottom-left-radius:4px; 
+	
+	background: -webkit-gradient(linear, left top, left bottombottom, from(#bcbcbe), to(#ffffff));  
+    background: -moz-linear-gradient(top,  #bcbcbe,  #ffffff);
+   	outline: none;
+	border: none;
+}
+
+#headbar #search #searchsubmit {
+	padding: 0;
+	margin: 0;
+	margin-left: -4px;	
+	
+	outline: none;
+	border: none;
+	
+	-moz-border-radius-topright:4px; 
+	-moz-border-radius-bottomright:4px; 
+	-webkit-border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px; 
+	border-top-right-radius:4px; 
+	border-bottom-right-radius:4px; 
+	
+	color:  #ffffff;
+	background-color: #6a6a6a; 
+	cursor: pointer;
+
+}
+
+#headbar:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+	
+nav { display: block; float: left; min-width: 600px; margin: 0 auto;  position: relative;   }
+
+/* nav { display: block; margin: 0 auto; margin-left: 22px; margin-right: 22px; border: 1px solid #222; position: relative; background-color: #6a6a6a;  } */  
+
+
+
+/*
+.borderradius nav { -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; }  
+.cssgradients nav { background-image:-moz-linear-gradient(0% 22px 90deg, #222, #999); background-image:-webkit-gradient(linear, 0% 0%, 0% 70%, from(#999), to(#222)); }  
+.boxshadow.rgba nav { -moz-box-shadow:2px 2px 2px rgba(0,0,0,.75); -webkit-box-shadow:2px 2px 2px rgba(0,0,0,.75); box-shadow:2px 2px 2px rgba(0,0,0,.75); }
+*/
+
+nav ul { padding: 0; margin: 0; }
+nav li { position:relative; list-style-type:none; }
+.cssgradients nav li:hover { background-image:-moz-linear-gradient(0% 100px 90deg, #999, #222); background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#555)); }
+nav li.separator { display: none; }
+nav li.flLeft {  float:left; }
+nav li.flRight { float:right; }
+
+ nav ul:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }  
+
+/* nav li a { display:block; padding:10px 20px;  color:#eee; text-decoration:none; border-left:1px solid #999; border-right:1px solid #222; } */
+nav li a { display:block; padding:10px 20px;  color:#eee; text-decoration:none; text-shadow: #eee 0 0 3px ; font-size: 12px;  }
+
+nav li a:focus { outline:none; text-decoration:underline; }  
+nav li:first-child a { border-left:none; }
+/* nav li.last a { border-right:none; } */ 
+nav li:last-child a { border-right:none; }
+/* nav li.flRight:last-child a { border:none; } */
+/* nav a span { display:block; float:right; margin-left:5px; } */
+nav a span { margin-left:5px; }
+nav ul ul { display:none; width:100%; position:absolute; left:0; background:#6a6a6a; }  
+nav ul ul li { float:none; }  
+nav ul ul a { padding:5px 10px; border-left:none; border-right:none; font-size:14px; }  
+nav ul ul a:hover { background-color:#555; }
+
+  
+  main
+.borderradius nav ul ul { -moz-border-radius-bottomleft:4px; -moz-border-radius-bottomright:4px; -webkit-border-bottom-left-radius:4px; -webkit-border-bottom-rightright-radius:4px; border-bottom-left-radius:4px; border-bottom-rightright-radius:4px; }  
+.boxshadow.rgba nav ul ul { background-color:rgba(0,0,0,0.8); -moz-box-shadow:2px 2px 2px rgba(0,0,0,.8); -webkit-box-shadow:2px 2px 2px rgba(0,0,0,.8); box-shadow:2px 2px 2px rgba(0,0,0,.8); }  
+.rgba nav ul ul li { border-left:1px solid rgba(0,0,0,0.1); border-right:1px solid rgba(0,0,0,0.1); }  
+.rgba nav ul ul a:hover { background-color:rgba(85,85,85,.9); }  
+.borderradius.rgba nav ul ul li.last { border-left:1px solid rgba(0,0,0,0.1); border-bottom:1px solid rgba(0,0,0,0.1); -moz-border-radius-bottomleft:4px; -moz-border-radius-bottomright:4px; -webkit-border-bottom-left-radius:4px; -webkit-border-bottom-rightright-radius:4px; border-bottom-left-radius:4px; border-bottom-rightright-radius:4px; }  
+
+/************************ NAV end **/
 /***********************************/
 
 	
 #main {
 	clear: both;
+	padding-top: 11px;
 }
 
 #content {

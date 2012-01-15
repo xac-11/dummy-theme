@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-		<div id="content">
-			
+		<div id="page">
+			<div id="articles">
 			<?php  //echo "cat id: " . get_cat_ID('private');
 				if( get_the_title() == "public" ) {
 					$catId = get_cat_ID('public');
@@ -29,16 +29,19 @@
 					}
 					wp_reset_postdata();
 					
-				} else {
+				} 
+				/*
+				else {
 					if ( have_posts() ) {
 						while ( have_posts() ) { 
 							the_post();
 							get_template_part( 'content-page', 'page' );
 						}
 					}
-					
 				}
+				 */
 			?>
+			</div><!-- #articles -->
 		</div><!-- #content -->
 
 <?php get_sidebar(); ?>

@@ -18,21 +18,20 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page">
+<div id="container">
 	<header>
 			<div id="branding">
-				xac
+				xacTheme version: 0.1
 			</div>
 
-			<div id="headbar">
-				<nav>
-					<?php 	xac_nav_menu();	 //wp_nav_menu( );?>
-				</nav>
-			 
+			<nav>
+				<?php xac_nav_menu(); //wp_nav_menu( );?>
+			</nav>
+			 <!--
 				<div id="search">
-					<?php get_search_form(); ?>
+					<?php //get_search_form(); ?>
 				</div>
-			</div>
+			-->
 			<!--  
 				<div id="categories">
 					<ul>

@@ -1,3 +1,5 @@
-<aside>
-	<h3>SIDEBAR</h3>
-</aside>
+  <div id="sidebar">
+  		<aside>
+ 			aside
+	  	</aside>
+  </div>

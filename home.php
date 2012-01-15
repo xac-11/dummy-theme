@@ -1,7 +1,7 @@
 
 <?php get_header(); ?>
 
-		<div id="content">
+		<div id="page">
 			<?php 
 				$home_content = get_page_by_title('home');
 				setup_postdata($home_content );

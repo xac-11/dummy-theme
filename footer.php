@@ -3,7 +3,7 @@
 	</div><!-- #main -->
 
 	<footer>
-		<h3>FOOTER</h3>
+		&copy; 2011 &middot; xacTheme 
 	</footer>
 </div><!-- #page -->
 

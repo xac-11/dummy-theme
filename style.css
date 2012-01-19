@@ -1,18 +1,19 @@
 @CHARSET "UTF-8";
 
 /*
-Theme Name: dummy theme
+Theme Name: xacTheme
 Theme URI: http://dummytheme.com
 Author: xac
 Author URI: http://xac-i.net
 Description: description
-Version: 1.11
+Version: 18012012
 License: GNU General Public License
 License URI: license.txt
 Tags: 
 */
 
-@charset "utf-8";
+@import url("css/smoothness.css");
+
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
 	{
@@ -78,6 +79,11 @@ body {
 /***************************************************************************************************************/
 
 
+header #branding {
+	font-size: 11px;
+	color: rgb( 77, 77, 77 );
+}
+
 /***************************************************************************************************************/
 /** HEADER *****************************************************************************************************/
 
@@ -115,7 +121,8 @@ nav li a {
 	padding-top: 9px;
 	display: block;
 	text-decoration: none;
-	color: rgb(224, 224, 224);
+	/* color: rgb(11, 11, 11); */
+	color: rgb( 255, 255, 255 );
 	text-shadow: rgb(224, 224, 224) 0 0 4px;	
 	font-size: 12px;
 	font-weight: normal;
@@ -278,21 +285,286 @@ nav #search #submitBtn {
 /***************************************************************************************************************/
 
 /***************************************************************************************************************/
+/** NOTIFICATION ***********************************************************************************************/
+
+#notification {
+	color: 	#808080;
+	font-size: 12px;
+	padding: 4px 42px;
+}
+
+#notification .success {
+	color: green;
+}
+
+#notification  .error {
+	color: red;
+}
+
+/*********************************************************************************************** NOTIFICATION **/
+/***************************************************************************************************************/
+
+
+/***************************************************************************************************************/
 /** SIDEBAR ****************************************************************************************************/
 
 #sidebar {
-	width: 38.2%;
+	width: 35.2%;
 	float: right;	
-	opacity: 0;
-}
-
-#sidebar aside {
-	border: 1px solid black;
-	padding: 11px;
 	margin-right: 11px;
 	margin-bottom: 11px;
 	
 }
+
+#sidebar aside.widget {
+	padding: 0 11px 11px 11px;
+	margin: 0 0 11px 0;
+	font-size: 12px;
+	color: rgb( 128, 128, 128 );
+	display: block;
+	
+	border: 1px solid rgb( 128, 128, 128 );
+	-moz-box-shadow: 0px 0px 6px rgb( 128, 128, 128 );
+	-webkit-box-shadow: 0px 0px 6px rgb( 128, 128, 128 );
+	box-shadow: 0px 0px 6px rgb( 128, 128, 128 );
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#sidebar aside.widget a {
+	text-decoration: none;
+	padding: 2px;
+	margin: 0;
+	color: rgb( 128, 128, 128 );
+	
+}
+
+#sidebar aside.widget a:hover {
+	color: rgb( 255, 255, 255 );
+	background: rgb( 128, 128, 128 );
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#sidebar aside.widget h3 {
+	margin: 0 -11px 11px -11px;
+	padding: 6px 11px;
+	color: rgb(255, 255, 255);
+	background: #d3d3d3; /* Old browsers */
+	background: -moz-linear-gradient(top, #d3d3d3 0%, #8d8d8d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d3d3d3), color-stop(100%,#8d8d8d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #d3d3d3 0%,#8d8d8d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #d3d3d3 0%,#8d8d8d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #d3d3d3 0%,#8d8d8d 100%); /* IE10+ */
+	background: linear-gradient(top, #d3d3d3 0%,#8d8d8d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#8d8d8d',GradientType=0 ); /* IE6-9 */
+}
+
+#sidebar label {
+	font-size: 11px;
+	width: 50px;
+	padding: 0;
+	margin: 0;	
+	display: block;
+	margin-right: 11px;
+}
+
+#sidebar p {
+	background: none;
+}
+
+#sidebar p:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+/******************************************/
+/** SIDEBAR LOGIN  ************************/
+.widget_wp_sidebarlogin {
+	width: 214px;
+	height: 144px;
+	/* margin-left: 11px !important; */
+}
+
+
+.widget_wp_sidebarlogin:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+.widget_wp_sidebarlogin form {
+	margin: 0 !important;
+	width: 212px;
+}
+	
+#sidebar .widget_wp_sidebarlogin form p {
+	margin: 4px !important;
+	
+}
+
+
+#sidebar .widget_wp_sidebarlogin label {		
+		float: left;
+		padding: 0;
+		margin: 0;
+		padding-top: 4px;
+		display: block;
+		width: 93px;
+}
+
+
+#sidebar .widget_wp_sidebarlogin .text {
+	display: block;
+	padding: 2px 6px; 
+	
+	width: 111px;
+    font-size: 12px;
+    color: rgb( 77,77,77);  
+    text-shadow: 1px 1px 4px #fff;  
+    outline:  none;
+
+	background: #CECECE;
+	background: -moz-linear-gradient(top, #CECECE 0%, #999 13%, #999 50%, gray 87%, #353535 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#CECECE), color-stop(13%,#999), color-stop(50%,#999), color-stop(87%,gray), color-stop(100%,#353535));
+	background: -webkit-linear-gradient(top, #CECECE 0%,#999 13%,#999 50%,gray 87%,#353535 100%);
+	background: -o-linear-gradient(top, #CECECE 0%,#999 13%,#999 50%,gray 87%,#353535 100%);
+	background: -ms-linear-gradient(top, #CECECE 0%,#999 13%,#999 50%,gray 87%,#353535 100%);
+	background: linear-gradient(top, #CECECE 0%,#999 13%,#999 50%,gray 87%,#353535 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cecece', endColorstr='#353535',GradientType=0 );
+ 
+    -webkit-border-radius: 3px;  
+    -moz-border-radius: 3px;  
+    border-radius: 3px;  
+    border: 1px solid #717171;  
+    
+    -webkit-box-shadow: 1px 1px 0px #efefef;  
+    -moz-box-shadow: 1px 1px 0px #efefef;  
+    box-shadow:  1px 1px 0px #efefef;  
+}
+
+.widget_wp_sidebarlogin .rememberme {
+	text-align: right;
+}
+
+.widget_wp_sidebarlogin .checkbox {
+	cursor: pointer;
+}
+
+#sidebar .widget_wp_sidebarlogin .rememberme label{
+	width: 95px;
+	padding-left: 0;
+	float: right;
+}
+
+#sidebar .widget_wp_sidebarlogin .submit {
+	float: right;
+}
+
+#sidebar .widget_wp_sidebarlogin .text:focus {  
+    -webkit-box-shadow: 0px 0px 3px #007eff;  
+    -moz-box-shadow: 0px 0px 3px #007eff;  
+    box-shadow: 0px 0px 3px #007eff; 
+    
+        
+    background: #cecece; /* Old browsers */
+	background: -moz-linear-gradient(top, #cecece 0%, #ffffff 25%, #ffffff 75%, #cecece 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cecece), color-stop(25%,#ffffff), color-stop(75%,#ffffff), color-stop(100%,#cecece)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #cecece 0%,#ffffff 25%,#ffffff 75%,#cecece 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #cecece 0%,#ffffff 25%,#ffffff 75%,#cecece 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #cecece 0%,#ffffff 25%,#ffffff 75%,#cecece 100%); /* IE10+ */
+	background: linear-gradient(top, #cecece 0%,#ffffff 25%,#ffffff 75%,#cecece 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cecece', endColorstr='#cecece',GradientType=0 ); /* IE6-9 */ 
+}  
+
+#sidebar .widget_wp_sidebarlogin img {
+	padding: 3px;
+	border: 1px solid #ddd;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	margin-right: 11px;
+	margin-top: 0;1px solid 
+}
+
+#sidebar .widget_wp_sidebarlogin li {
+	margin: 4px 0;
+}
+
+.widget_wp_sidebarlogin a {
+}
+
+#sidebar .widget_wp_sidebarlogin #wp-submit {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	
+	-webkit-box-shadow: 0px 0px 2px #808080;  
+    -moz-box-shadow: 0px 0px 2px #808080;  
+    box-shadow: 0px 0px 2px #808080; 
+    
+    color: #808080;
+    text-shadow: #808080 0 0 1px;	
+    font-size: 12px;
+    
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+#sidebar .widget_wp_sidebarlogin #wp-submit:hover {
+	color: rgb( 230, 230, 230 );
+	 text-shadow: rgb( 230, 230, 230 ) 0 0 1px;	
+	background: rgb( 128, 128, 128 );
+}
+
+/************************ SIDEBAR LOGIN  **/
+/******************************************/
+
+
+/******************************************/
+/** CATEGORIES ****************************/
+#sidebar #cats {
+	display: block;
+	width: 315px;
+}
+
+#sidebar #cats:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+#sidebar #cats li {
+	margin-bottom: 4px;
+	text-decoration: none;
+	list-style: none;
+}
+
+#sidebar #cats #public {
+	width: 50%;
+	float: left;
+	
+}
+
+#sidebar #cats #private {
+	width: 50%;
+	float: right;
+	
+}
+
+/**************************** CATEGORIES **/
+/******************************************/
 
 /**************************************************************************************************** SIDEBAR **/
 /***************************************************************************************************************/
@@ -333,6 +605,19 @@ article h1 {
 	width: 91%;
 	margin-left: 50px;
 	display: block;
+}
+
+article h3 {
+	font-weight: bold;
+	margin: 15px 0;
+}
+
+article h3:first-of-type {
+	margin-top: 0;
+} 
+
+article p, article .wp_syntax {
+	margin: 11px;
 }
 
 article a {
@@ -466,11 +751,46 @@ article .meta:after {
 	visibility: hidden;
 }
 
-article .meta .category {
+article .meta .categories {
 	float: left;
 	padding: 4px  11px;
 	border-right: 	1px solid rgb( 255, 255, 255 );		
 }
+
+article .meta .ui-icon {
+	position: absolute;
+	margin-top: -2px;
+	opacity: 0.6;
+}
+
+article .meta .more-icon {
+	margin-top: -15px;
+	margin-left: 38px;
+}
+
+article .meta .morebgr {
+	width: 54px;
+}
+
+article .meta .morebgr:hover {
+	background: rgb( 128, 128, 128 );
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+article .meta .morebgr .ui-icon  {
+	filter:Invert();
+}
+
+article .meta .morebgr a:hover {
+	background: none;
+}
+
+article .meta .metaellist {
+	padding-left: 20px;
+}
+
 
 article .meta a {
 	text-decoration: none;
@@ -500,6 +820,11 @@ article .meta .comments {
 	float: left;
 	padding: 4px  11px;
 	border-left: 	1px solid rgb( 128, 128, 128 ); 
+}
+
+article .meta .more {
+	float: right;
+	padding: 4px  11px;
 }
 
 article .meta button {
@@ -624,11 +949,14 @@ footer {
 	font-size: 12px;
 	font-weight: normal;
 	-webkit-border-bottom-right-radius: 8px;
--webkit-border-bottom-left-radius: 8px;
--moz-border-radius-bottomright: 8px;
--moz-border-radius-bottomleft: 8px;
-border-bottom-right-radius: 8px;
-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, .50);
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .50);
+	box-shadow: 0 0 4px rgba(0, 0, 0, .50);
 }
 
 

@@ -1,1 +1,62 @@
-xac is here
+TODO:
+
+	design home
+	style paggination
+	style images in posts
+	comments
+	search page
+	redesign more button
+	messages appereance
+	user-photo to sidebar-login
+	
+	create images gallery
+		
+
+/*******************/
+/** configuration **/
+
+wp-config.php
+
+define ('WPLANG', 'de_DE');
+
+if (!session_id())
+	session_start();
+
+/**********************/
+/** required plugins **/
+
+sidebar-login	http://wordpress.org/extend/plugins/sidebar-login/
+wp-paginate		http://wordpress.org/extend/plugins/wp-paginate/
+user-photo 		http://wordpress.org/extend/plugins/user-photo/
+
+/************************/
+/** permalink structur **/
+
+/%year%/%monthnum%/%postname%/
+
+/***********************/
+/** main menu stuctur **/
+
+- home
+- public
+- private
+- ( page 1 )
+- (separator)
+- ( page 2 )
+- ( page 3 )
+- ...
+
+/**********************/
+/** category stuctur **/
+
+private
+	- cat 1
+	- cat 2
+	- cat 3
+	...
+
+public
+	- cat 1
+	- cat 2
+	- cat 3
+	...

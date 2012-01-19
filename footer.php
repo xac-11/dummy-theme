@@ -1,9 +1,8 @@
 
-
 	</div><!-- #main -->
 
 	<footer>
-		&copy; 2011 &middot; xacTheme 
+		&copy; 2011 &middot; xacBlog 
 	</footer>
 </div><!-- #page -->
 
